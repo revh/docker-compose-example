@@ -15,7 +15,7 @@ services:
     restart: on-failure
     command: yarn run dev 
     volumes:
-      - ./products:/usr/src/app
+      - ./products/server:/usr/src/app/server
     ports:
       - "3000:80"
     environment:
