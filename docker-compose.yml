@@ -18,6 +18,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD
       - MYSQL_DATABASE
+      - "WAIT_HOSTS=db-service:3306"
     depends_on:
       - db-service
     

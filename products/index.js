@@ -11,21 +11,19 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
+const success = data => ({ status: "success", data });
+const error = error => ({ status: "error", error });
+
 app.get('/', (_req, res) => {
   try {
     connection.query('SELECT ID, NAME FROM products', function (err, rows) {
       if (err) throw err;
 
-      res.json({
-        status: "success",
-        products: rows
-      })
+      res.json(success(rows));
     });
+
   } catch (e) {
-    res.json({
-      status: "error",
-      error: e
-    })
+    res.json(error(e));
   }
 });
 

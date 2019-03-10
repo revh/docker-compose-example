@@ -12,7 +12,7 @@
         if ($json->status === "success"): 
     ?>
     <ul>
-    <?php foreach($json->products as $row): ?>
+    <?php foreach($json->data as $row): ?>
         <li><?= $row->NAME ?></li>
     <?php endforeach ?>
     </ul>
