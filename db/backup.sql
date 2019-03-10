@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.23, for osx10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.23, for macos10.13 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ecommerce
 -- ------------------------------------------------------
@@ -26,7 +26,7 @@ CREATE TABLE `products` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `NAME` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,9 +35,13 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Nome1'),(2,'Nome2');
+INSERT INTO `products` VALUES (1,'Ice Cream'),(2,'Apple'),(3,'Lasagne');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'ecommerce'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -48,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-10 10:09:45
+-- Dump completed on 2019-03-10 18:40:06
